@@ -13,7 +13,8 @@ const Car = () => {
     useEffect(() => {
       const displaySingleCar = async () => {
         try {
-          const res = await axios.get(`http://localhost:5000/api/car/${id}`)
+          // const res = await axios.get(`http://localhost:5000/api/car/${id}`)
+          const res = await getCar(id)
           console.log(res) 
           setCar(res.data)
         } catch (error) {
@@ -29,7 +30,7 @@ const Car = () => {
 
      <Row className='mt-5 p-3'>       
        <Col lg={10} xs={6}>
-            <img className='detailCarImg'src={`http://localhost:5000/uploads/${car.picture}`} alt="carimg"  />
+            <img className='detailCarImg'src={`https://victorious-bass-flip-flops.cyclic.app/uploads/${car.picture}`} alt="carimg"  />
        </Col>
 
        <Col lg={10} xs={10} className='mt-5'>

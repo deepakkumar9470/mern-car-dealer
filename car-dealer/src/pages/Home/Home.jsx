@@ -76,7 +76,7 @@ const Home = () => {
                 cars.map((item, i) => (
                   <Col lg={5} sm={20} xs={24}>
                     <div className='car p-2 car_sd'>
-                      <img className='carImg' src={`http://localhost:5000/uploads/${item.picture}`} alt="carimg" />
+                      <img className='carImg' src={`https://victorious-bass-flip-flops.cyclic.app/uploads/${item.picture}`} alt="carimg" />
                       <div key={item._id} className='carContent d-flex m-2 align-items-center justify-content-between p-2'>
 
                         <div>

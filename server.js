@@ -20,7 +20,7 @@ app.use('/api/car', carRoute)
 app.use(express.static("./car_dealer/build"));
   
 app.get('*', (req, res) => {
-    res.sendFile("/car_dealer/build/index.html"),(err)=>{
+    res.sendFile("./car_dealer/build/index.html"),(err)=>{
         res.status(500).send(err)
     };
 });
@@ -28,9 +28,6 @@ app.get('*', (req, res) => {
 
 cb()
 
-app.get('/',(req,res)=>{
-    res.send('hello')
-})
 app.listen(PORT , ()=>{
     console.log(`Server started at post http://localhost:${PORT}`)
 })
