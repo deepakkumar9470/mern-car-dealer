@@ -5,7 +5,6 @@ import express from 'express'
 import cors from 'cors'
 const app = express()
 const PORT = process.env.PORT || 8000
-import path from 'path'
 import cb from './db/db.js'
 import carRoute from './routes/carApi.js'
 
@@ -18,12 +17,12 @@ app.use('/files', express.static('./public/files'))
 app.use('/api/car', carRoute)
 
 
-app.use(express.static(path.join(__dirname, "./car_dealer/build")));
+app.use(express.static("./car_dealer/build"));
   
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, "./car_dealer/build/index.html"),(err)=>{
+    res.sendFile("/car_dealer/build/index.html"),(err)=>{
         res.status(500).send(err)
-    });
+    };
 });
 
 
